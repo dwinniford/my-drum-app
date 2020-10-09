@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-drum-block',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drum-block.component.css']
 })
 export class DrumBlockComponent implements OnInit {
-
+  @Input() drum: any
   constructor() { }
 
   ngOnInit(): void {

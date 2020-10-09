@@ -1,5 +1,5 @@
 <p>drumset works!</p>
 
 <div *ngFor="let drum of drums">
-    <h3>{{drum.name}}</h3>
+    <app-drum-block [drum]="drum"></app-drum-block>
 </div>
