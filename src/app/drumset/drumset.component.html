@@ -1,5 +1,2 @@
-<p>drumset works!</p>
+<app-drum-block *ngFor="let drum of drums"  [drum]="drum" class="drum-block"></app-drum-block>
 
-<div *ngFor="let drum of drums">
-    <app-drum-block [drum]="drum"></app-drum-block>
-</div>
