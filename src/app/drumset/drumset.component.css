@@ -9,3 +9,10 @@
 .drum-block:nth-child(2) {
     background-color: brown;
 }
+
+.drum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 10vw 0px 10vw;
+    grid-gap: 10px;
+}
