@@ -1,9 +1,11 @@
 main h1 {
     text-align: center;
+    color: #fff;
 }
 
 .drum-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0px 10vw 0px 10vw;
+    grid-gap: 10px;
 }

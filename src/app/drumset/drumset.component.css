@@ -3,6 +3,7 @@
     background-color: aquamarine;
     height: 100px;
     text-align: center;
+    position: relative;
 }
 
 .drum-block:nth-child(2) {

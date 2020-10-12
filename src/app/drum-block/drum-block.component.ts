@@ -11,5 +11,8 @@ export class DrumBlockComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  tap() {
+    window.alert(`${this.drum.sound}!!!!`)
+  }
 
 }
