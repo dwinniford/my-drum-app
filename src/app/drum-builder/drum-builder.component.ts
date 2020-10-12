@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { drums } from '../drums'
 
 @Component({
   selector: 'app-drum-builder',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drum-builder.component.css']
 })
 export class DrumBuilderComponent implements OnInit {
-
+  drums = drums
   constructor() { }
 
   ngOnInit(): void {
