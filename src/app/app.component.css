@@ -3,3 +3,18 @@ main h1 {
     color: #fff;
 }
 
+nav {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+    color: goldenrod
+}
