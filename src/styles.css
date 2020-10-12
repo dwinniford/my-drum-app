@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: spectral;
+    src: url('./assets/Spectral-Light.ttf')
+}
+
 body {
     background-color: rgba(0,0,0,.9);
+    font-family: spectral;
 }
+
