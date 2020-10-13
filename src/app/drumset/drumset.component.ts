@@ -20,5 +20,8 @@ export class DrumsetComponent implements OnInit {
   activateForm() {
     this.isActive = true
   }
+  deactivateForm() {
+    this.isActive = false
+  }
 
 }

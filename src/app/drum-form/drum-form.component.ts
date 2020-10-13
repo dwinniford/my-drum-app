@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-drum-form',
@@ -7,18 +7,22 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DrumFormComponent implements OnInit {
   @Input() addDrum;
+  @Input() isActive;
+  @Output() isActiveChange = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
   onSubmit(event) {
     event.preventDefault()
-    console.log(event.target.name.value, event.target.sound.value)
+    
     const drum = {
       name: event.target.name.value, 
       sound: event.target.sound.value
     }
     this.addDrum(drum)
+    this.isActive = false
+    this.isActiveChange.emit(this.isActive)
   }
 
 }
