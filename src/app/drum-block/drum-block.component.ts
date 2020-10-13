@@ -7,14 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DrumBlockComponent implements OnInit {
   @Input() drum: any
+  hasTapping: boolean = false
   constructor() { }
 
   ngOnInit(): void {
   }
   tap(event) {
-    event.target.classList.add("tapping")
+    // console.log(event.target)
+    // event.target.classList.add("tapping")
+    this.hasTapping = true
     setTimeout(()=> {
-      return this.unTap();
+      this.hasTapping = false
     }, 2000)
   }
   unTap() {

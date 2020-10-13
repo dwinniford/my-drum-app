@@ -1,4 +1,4 @@
-<div (click)="tap($event)">
+<div (click)="tap($event)" [class.tapping]="hasTapping">
     <h3>{{drum.name}}</h3>
     <h1>{{drum.sound}}</h1>
 </div>
