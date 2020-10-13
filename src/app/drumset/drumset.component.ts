@@ -13,4 +13,8 @@ export class DrumsetComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addDrum() {
+     drums.push({name: "Hat", sound: "ch"})
+  }
+
 }

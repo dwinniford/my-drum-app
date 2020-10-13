@@ -13,15 +13,10 @@ export class DrumBlockComponent implements OnInit {
   ngOnInit(): void {
   }
   tap(event) {
-    // console.log(event.target)
-    // event.target.classList.add("tapping")
     this.hasTapping = true
     setTimeout(()=> {
       this.hasTapping = false
     }, 2000)
-  }
-  unTap() {
-    document.querySelector(".tapping").classList.remove("tapping")
   }
 
 }
