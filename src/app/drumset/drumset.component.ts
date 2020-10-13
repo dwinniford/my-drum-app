@@ -8,13 +8,17 @@ import { drums } from '../drums'
 })
 export class DrumsetComponent implements OnInit {
   drums = drums;
+  isActive : boolean = false
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addDrum() {
-     drums.push({name: "Hat", sound: "ch"})
+  addDrum(drum) {
+     drums.push(drum)
+  }
+  activateForm() {
+    this.isActive = true
   }
 
 }

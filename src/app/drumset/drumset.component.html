@@ -1,6 +1,7 @@
 <div class="drum-grid">
     <app-drum-block *ngFor="let drum of drums"  [drum]="drum" class="drum-block"></app-drum-block>
-    <div><button (click)="addDrum()">Add</button></div>
+    <app-drum-form *ngIf="isActive" class="drum-form" [addDrum]="addDrum"></app-drum-form>
+    <div><button (click)="activateForm()">Add</button></div>
 </div>
 
 

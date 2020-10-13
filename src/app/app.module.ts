@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DrumsetComponent } from './drumset/drumset.component';
 import { DrumBlockComponent } from './drum-block/drum-block.component';
 import { DrumBuilderComponent } from './drum-builder/drum-builder.component';
+import { DrumFormComponent } from './drum-form/drum-form.component';
 
 const appRoutes: Routes = [
   {path: '', component: DrumsetComponent },
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
     AppComponent,
     DrumsetComponent,
     DrumBlockComponent,
-    DrumBuilderComponent
+    DrumBuilderComponent,
+    DrumFormComponent
   ],
   imports: [
     BrowserModule,
