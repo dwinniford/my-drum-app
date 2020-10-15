@@ -21,8 +21,8 @@ export class ReactiveDrumFormComponent implements OnInit {
     event.preventDefault()
     
     const drum = {
-      name: event.target.name.value, 
-      sound: event.target.sound.value
+      name: this.name.value,
+      sound: this.sound.value
     }
     this.addDrum(drum)
     this.isActive = false
