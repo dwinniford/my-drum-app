@@ -13,10 +13,15 @@ export class ReactiveDrumFormComponent implements OnInit {
   @Input() addDrum;
   @Input() isActive;
   @Input() editDrum;
+  @Input() drum;
   @Output() isActiveChange = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
+    if(this.drum) {
+      this.name.setValue(this.drum.name)
+      this.sound.setValue(this.drum.sound)
+    }
   }
   onSubmit(event) {
     event.preventDefault()
