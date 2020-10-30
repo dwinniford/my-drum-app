@@ -12,5 +12,8 @@ export class DrumBuilderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  editDrum(drum) {
+    console.log('edited drum')
+  }
 
 }

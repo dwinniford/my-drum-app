@@ -12,6 +12,7 @@ export class ReactiveDrumFormComponent implements OnInit {
 
   @Input() addDrum;
   @Input() isActive;
+  @Input() editDrum;
   @Output() isActiveChange = new EventEmitter()
   constructor() { }
 
@@ -24,9 +25,14 @@ export class ReactiveDrumFormComponent implements OnInit {
       name: this.name.value,
       sound: this.sound.value
     }
-    this.addDrum(drum)
-    this.isActive = false
-    this.isActiveChange.emit(this.isActive)
+    if(this.editDrum) {
+      this.editDrum(drum)
+    } else {
+      this.addDrum(drum)
+      this.isActive = false
+      this.isActiveChange.emit(this.isActive)
+    }
+    
   }
 
 }
