@@ -4,7 +4,7 @@ form {
     grid-gap: 10px;
     
 }
-.ng-touched.ng-invalid {
+input.ng-touched.ng-invalid, select.ng-touched.ng-invalid {
     border: 2px solid red;
 }
 

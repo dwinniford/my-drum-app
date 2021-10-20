@@ -1,7 +1,7 @@
-<form (submit)="onSubmit($event)">
-    <input placeholder="name" name="name" [formControl]="name">
-    <input placeholder="sound" name="sound" [formControl]="sound">
-    <select [formControl]="animation">
+<form (submit)="onSubmit($event)" [formGroup]="drumForm">
+    <input placeholder="name" name="name" formControlName="name">
+    <input placeholder="sound" name="sound" formControlName="sound">
+    <select formControlName="animation">
         <option value="" disabled selected>Animation</option>
         <option value="fade">Fade</option>
         <option value="fall">Fall</option>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms'
+import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-reactive-drum-form',
@@ -7,17 +7,23 @@ import { FormControl, Validators } from '@angular/forms'
   styleUrls: ['./reactive-drum-form.component.css']
 })
 export class ReactiveDrumFormComponent implements OnInit {
-  name = new FormControl('', [
-    Validators.required,
-    Validators.minLength(4)
-  ]);
-  sound = new FormControl('', [
-    Validators.required,
-    Validators.minLength(3)
-  ]);
-  animation = new FormControl('', [
-    Validators.required
-  ]);
+  drumForm = new FormGroup({
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(4)
+    ]),
+    sound: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3)
+    ]),
+    animation: new FormControl('', [
+      Validators.required
+    ])
+  })
+  get name() {return this.drumForm.get("name")};
+  get sound() {return this.drumForm.get("sound")};
+  get animation() {return this.drumForm.get("animation")};
+  
 
   @Input() addDrum;
   @Input() isActive;
@@ -28,19 +34,17 @@ export class ReactiveDrumFormComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.drum) {
-      this.name.setValue(this.drum.name)
-      this.sound.setValue(this.drum.sound)
-      this.animation.setValue(this.drum.animation)
+      this.drumForm.setValue({
+        name: this.drum.name,
+        sound: this.drum.sound,
+        animation: this.drum.animation
+      })
     }
   }
   onSubmit(event) {
     event.preventDefault()
     
-    const drum = {
-      name: this.name.value,
-      sound: this.sound.value,
-      animation: this.animation.value
-    }
+    const drum = this.drumForm.value()
     if(this.editDrum) {
       this.editDrum(drum)
     } else {
