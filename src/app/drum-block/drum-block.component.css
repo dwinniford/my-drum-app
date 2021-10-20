@@ -4,36 +4,55 @@
     bottom: 0;
     right: 0;
     left: 0;
-}
-h1 {
-    opacity: 0;
-    height: 0px;
-    margin-top: 0;
-    margin-bottom: 0;
-    transition: all .5s ease;
-    display: none;
+    overflow: hidden;
 }
 
-.tapping h1 {
-    display: block;
+.fade h1 {
+    opacity: 0;
+    position: absolute;
+    font-size: 3rem;
+    line-height: 1;
+    top: calc(50% - 1.5rem);
+    transition: opacity .5s ease-in;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.tapping.fade h1 {
     opacity: 1;
-    height: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.tapping h3 {
-    opacity: 0;
-    height: 0px;
-    margin: 0px;
 }
 h3 {
     transition: all .5s ease;
 }
 
+.tapping.fade h3 {
+    opacity: 0;
+}
+
+.fall h1 {
+    position: absolute;
+    font-size: 3rem;
+    line-height: 1;
+    top: calc(50% - 1.5rem);
+    transform: translateY(-200px);
+    transition: transform .5s ease-in;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.tapping.fall h1 {
+    transform: translateY(0);
+}
+.tapping.fall h3 {
+    transform: translateY(200px);
+    transition-delay: .2s;
+}
+
 .tap-holder:hover {
     cursor: pointer;
 }
+
 .tap-holder:hover h3 {
     transform: scale(1.2);
 }

@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./drum-block.component.css']
 })
 export class DrumBlockComponent implements OnInit {
-  @Input() drum: {name: string; sound: string}
+  @Input() drum: {name: string; sound: string; animation: string}
   hasTapping: boolean = false
   constructor() { }
 

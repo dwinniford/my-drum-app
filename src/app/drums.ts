@@ -1,10 +1,12 @@
 export const drums = [
     {
         name: "Bass",
-        sound: "BOOM"
+        sound: "BOOM",
+        animation: "fade"
     },
     {
         name: "Snare",
-        sound: "Crack"
+        sound: "Crack",
+        animation: "fall"
     }
 ]
