@@ -44,7 +44,8 @@ export class ReactiveDrumFormComponent implements OnInit {
   onSubmit(event) {
     event.preventDefault()
     
-    const drum = this.drumForm.value()
+    const drum = this.drumForm.value
+    console.log("submitted, drum=", drum)
     if(this.editDrum) {
       this.editDrum(drum)
     } else {
