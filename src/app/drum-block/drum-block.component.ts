@@ -6,13 +6,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./drum-block.component.css']
 })
 export class DrumBlockComponent implements OnInit {
-  @Input() drum: any
+  @Input() drum: {name: string; sound: string}
   hasTapping: boolean = false
   constructor() { }
 
   ngOnInit(): void {
   }
-  tap(event) {
+  tap(event): void {
     this.hasTapping = true
     setTimeout(()=> {
       this.hasTapping = false
