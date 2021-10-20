@@ -4,3 +4,10 @@ form {
     grid-gap: 10px;
     
 }
+.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
+
+.alert {
+    color: red;
+}

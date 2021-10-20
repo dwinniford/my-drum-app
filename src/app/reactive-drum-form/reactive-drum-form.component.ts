@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormControl } from '@angular/forms'
+import { FormControl, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-reactive-drum-form',
@@ -7,9 +7,17 @@ import { FormControl } from '@angular/forms'
   styleUrls: ['./reactive-drum-form.component.css']
 })
 export class ReactiveDrumFormComponent implements OnInit {
-  name = new FormControl('');
-  sound = new FormControl('');
-  animation = new FormControl('');
+  name = new FormControl('', [
+    Validators.required,
+    Validators.minLength(4)
+  ]);
+  sound = new FormControl('', [
+    Validators.required,
+    Validators.minLength(3)
+  ]);
+  animation = new FormControl('', [
+    Validators.required
+  ]);
 
   @Input() addDrum;
   @Input() isActive;
