@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms'
 export class ReactiveDrumFormComponent implements OnInit {
   name = new FormControl('');
   sound = new FormControl('');
+  animation = new FormControl('');
 
   @Input() addDrum;
   @Input() isActive;
@@ -21,6 +22,7 @@ export class ReactiveDrumFormComponent implements OnInit {
     if(this.drum) {
       this.name.setValue(this.drum.name)
       this.sound.setValue(this.drum.sound)
+      this.animation.setValue(this.drum.animation)
     }
   }
   onSubmit(event) {
@@ -28,7 +30,8 @@ export class ReactiveDrumFormComponent implements OnInit {
     
     const drum = {
       name: this.name.value,
-      sound: this.sound.value
+      sound: this.sound.value,
+      animation: this.animation.value
     }
     if(this.editDrum) {
       this.editDrum(drum)

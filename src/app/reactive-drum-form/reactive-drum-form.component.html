@@ -1,6 +1,11 @@
 <form (submit)="onSubmit($event)">
     <input placeholder="name" name="name" [formControl]="name">
     <input placeholder="sound" name="sound" [formControl]="sound">
+    <select [formControl]="animation">
+        <option selected="selected">Animation</option>
+        <option value="fade">Fade</option>
+        <option value="fall">Fall</option>
+    </select>
     <input type="submit" value="submit">
 </form>
 
