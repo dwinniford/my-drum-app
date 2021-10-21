@@ -9,10 +9,12 @@ import { DrumBlockComponent } from './drum-block/drum-block.component';
 import { DrumBuilderComponent } from './drum-builder/drum-builder.component';
 import { DrumFormComponent } from './drum-form/drum-form.component';
 import { ReactiveDrumFormComponent } from './reactive-drum-form/reactive-drum-form.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {path: '', component: DrumsetComponent },
-  {path: 'edit', component: DrumBuilderComponent}
+  {path: 'edit', component: DrumBuilderComponent},
+  {path: '**', component: PageNotFoundComponent}
 ]
 
 @NgModule({
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     DrumBlockComponent,
     DrumBuilderComponent,
     DrumFormComponent,
-    ReactiveDrumFormComponent
+    ReactiveDrumFormComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
