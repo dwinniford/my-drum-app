@@ -1,6 +1,3 @@
 <h1>Edit Your drumset!</h1>
-<ul>
-    <li *ngFor="let drum of drums"><div>{{drum.name}}</div><div>{{drum.sound}}</div><div>Edit</div></li>
-</ul>
 
-<app-reactive-drum-form *ngFor="let drum of drums; index as i" class="drum-form" [editDrum]="editDrum" [drum]="drum" [index]="i"></app-reactive-drum-form>
+<app-reactive-drum-form *ngFor="let drum of drums; index as i" class="drum-form" [edit]="true" [drum]="drum" [index]="i"></app-reactive-drum-form>

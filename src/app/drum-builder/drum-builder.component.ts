@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { drums } from '../drums'
+import { DrumSetupService } from '../drum-setup.service';
 
 @Component({
   selector: 'app-drum-builder',
@@ -7,13 +7,10 @@ import { drums } from '../drums'
   styleUrls: ['./drum-builder.component.css']
 })
 export class DrumBuilderComponent implements OnInit {
-  drums = drums
-  constructor() { }
+  constructor(private drumSetupService: DrumSetupService) { }
 
+  drums = this.drumSetupService.getDrums()
   ngOnInit(): void {
-  }
-  editDrum(drum) {
-    console.log('edited drum')
   }
 
 }

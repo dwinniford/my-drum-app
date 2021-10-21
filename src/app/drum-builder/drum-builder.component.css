@@ -2,16 +2,3 @@ h1 {
     color: white;
     text-align: center;
 }
-
-ul {
-    color: #fff;
-    list-style: none;
-    margin: 0px 200px;
-    
-}
-
-li {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-}
