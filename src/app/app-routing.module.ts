@@ -7,8 +7,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 const appRoutes: Routes = [
-  {path: '', component: DrumsetComponent },
   {path: 'edit', component: DrumBuilderComponent},
+  {path: 'drum-pad', component: DrumsetComponent},
+  {path: '', redirectTo: '/drum-pad', pathMatch: 'full' },
   {path: '**', component: PageNotFoundComponent}
 ]
 
