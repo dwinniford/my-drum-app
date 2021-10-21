@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { drums } from '../drums'
+import { DrumSetupService } from '../drum-setup.service';
 
 @Component({
   selector: 'app-drumset',
@@ -7,17 +8,15 @@ import { drums } from '../drums'
   styleUrls: ['./drumset.component.css']
 })
 export class DrumsetComponent implements OnInit {
-  drums = drums;
   // must be passed down to child component with two way binding because it is a variable 
-  isActive : boolean = false
-  constructor() { }
+  isActive : boolean = false;
+  constructor(private drumSetupService: DrumSetupService) {}
+  
 
   ngOnInit(): void {
   }
-  // can be passed to child components with property binding because it is a function 
-  addDrum(drum) {
-     drums.push(drum)
-  }
+  drums = this.drumSetupService.getDrums();
+
   activateForm() {
     this.isActive = true
   }

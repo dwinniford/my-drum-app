@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { DrumSetupService } from '../drum-setup.service';
 
 @Component({
   selector: 'app-reactive-drum-form',
@@ -24,13 +25,11 @@ export class ReactiveDrumFormComponent implements OnInit {
   get sound() {return this.drumForm.get("sound")};
   get animation() {return this.drumForm.get("animation")};
   
-
-  @Input() addDrum;
   @Input() isActive;
   @Input() editDrum;
   @Input() drum;
   @Output() isActiveChange = new EventEmitter()
-  constructor() { }
+  constructor(private drumSetupService: DrumSetupService) { }
 
   ngOnInit(): void {
     if(this.drum) {
@@ -49,7 +48,7 @@ export class ReactiveDrumFormComponent implements OnInit {
     if(this.editDrum) {
       this.editDrum(drum)
     } else {
-      this.addDrum(drum)
+      this.drumSetupService.addDrum(drum)
       this.isActive = false
       this.isActiveChange.emit(this.isActive)
     }
