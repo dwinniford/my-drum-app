@@ -15,5 +15,8 @@ export class DrumSetupService {
   addDrum(drum) {
     this.currentDrums.push(drum)
   }
+  editDrum(index, drum) {
+    this.currentDrums.splice(index, 1, drum)
+  }
 
 }
