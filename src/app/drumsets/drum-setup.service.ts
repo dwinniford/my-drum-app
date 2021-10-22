@@ -5,18 +5,26 @@ import { drums } from './drums';
   providedIn: 'root'
 })
 export class DrumSetupService {
-  private currentDrums = drums
+  private currentDrumsets = [[...drums]]
   constructor() { }
   
-  getDrums() {
-    console.log(this.currentDrums)
-    return this.currentDrums
+  getAllDrumsets() {
+    return this.currentDrumsets
   }
-  addDrum(drum) {
-    this.currentDrums.push(drum)
+
+  getDrumset(setIndex) {
+    console.log(this.currentDrumsets[setIndex])
+    return this.currentDrumsets[setIndex]
   }
-  editDrum(index, drum) {
-    this.currentDrums.splice(index, 1, drum)
+  addDrumToSet(setIndex, drum) {
+    this.currentDrumsets[setIndex].push(drum)
+    console.log("currentDrumsets array after addDrumToSet", this.currentDrumsets, " original drums array =", drums)
+  }
+  editDrumInSet(setIndex, drumIndex, drum) {
+    this.currentDrumsets[setIndex].splice(drumIndex, 1, drum)
+  }
+  addDrumset() {
+    this.currentDrumsets.push([...drums])
   }
 
 }

@@ -1,0 +1,25 @@
+nav h1 {
+    text-align: center;
+    color: #fff;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+nav .sub-holder {
+    
+    color: #fff;
+    align-self: center;
+    font-size: 1.5rem;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+    color: goldenrod
+}

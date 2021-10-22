@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { DrumsetComponent } from './drumsets/drumset/drumset.component';
-import { DrumBlockComponent } from './drumsets/drum-block/drum-block.component';
-import { EditDrumsetComponent } from './drumsets/edit-drumset/edit-drumset.component';
-import { ReactiveDrumFormComponent } from './drumsets/reactive-drum-form/reactive-drum-form.component';
+// import { DrumsetComponent } from './drumsets/drumset/drumset.component';
+// import { DrumBlockComponent } from './drumsets/drum-block/drum-block.component';
+// import { EditDrumsetComponent } from './drumsets/edit-drumset/edit-drumset.component';
+// import { ReactiveDrumFormComponent } from './drumsets/reactive-drum-form/reactive-drum-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DrumsetsModule } from './drumsets/drumsets.module';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DrumsetsModule } from './drumsets/drumsets.module';
     // DrumBlockComponent,
     // EditDrumsetComponent,
     // ReactiveDrumFormComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

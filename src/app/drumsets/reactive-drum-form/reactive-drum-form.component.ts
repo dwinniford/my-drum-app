@@ -47,9 +47,9 @@ export class ReactiveDrumFormComponent implements OnInit {
     const drum = this.drumForm.value
     console.log("submitted, drum=", drum)
     if(this.edit) {
-      this.drumSetupService.editDrum(this.index, drum)
+      this.drumSetupService.editDrumInSet(0, this.index, drum)
     } else {
-      this.drumSetupService.addDrum(drum)
+      this.drumSetupService.addDrumToSet(0,drum)
       this.isActive = false
       this.isActiveChange.emit(this.isActive)
     }

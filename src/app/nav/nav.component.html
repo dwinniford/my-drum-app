@@ -1,0 +1,15 @@
+<nav>
+    <h1>My Drum App</h1>
+    <div ngClass="sub-holder">
+        <span>Drumsets: </span>
+        <span *ngFor="let set of drumsets; index as setIndex">
+            <a [routerLink]="['/drumsets', setIndex]" routerLinkActive="active">{{setIndex}}</a>
+        </span>
+    </div>
+    <div ngClass="sub-holder">
+        <a (click)="addDrumset()">Add Drumset</a>
+    </div>
+    
+    
+    <!-- <a routerLink="drumsets/0/edit" routerLinkActive="active">Edit Drum Pad</a> -->
+</nav>

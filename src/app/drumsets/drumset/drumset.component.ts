@@ -14,7 +14,7 @@ export class DrumsetComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  drums = this.drumSetupService.getDrums();
+  drums = this.drumSetupService.getDrumset(0);
 
   activateForm() {
     this.isActive = true

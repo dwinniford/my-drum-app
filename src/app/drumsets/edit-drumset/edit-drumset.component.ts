@@ -9,7 +9,7 @@ import { DrumSetupService } from '../drum-setup.service';
 export class EditDrumsetComponent implements OnInit {
   constructor(private drumSetupService: DrumSetupService) { }
 
-  drums = this.drumSetupService.getDrums()
+  drums = this.drumSetupService.getDrumset(0)
   ngOnInit(): void {
   }
 
