@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DrumBuilderComponent } from './drum-builder.component';
+import { EditDrumsetComponent } from './edit-drumset.component';
 
-describe('DrumBuilderComponent', () => {
-  let component: DrumBuilderComponent;
-  let fixture: ComponentFixture<DrumBuilderComponent>;
+describe('EditDrumsetComponent', () => {
+  let component: EditDrumsetComponent;
+  let fixture: ComponentFixture<EditDrumsetComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DrumBuilderComponent ]
+      declarations: [ EditDrumsetComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DrumBuilderComponent);
+    fixture = TestBed.createComponent(EditDrumsetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

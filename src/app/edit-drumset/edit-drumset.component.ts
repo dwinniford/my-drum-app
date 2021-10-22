@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DrumSetupService } from '../drum-setup.service';
 
 @Component({
-  selector: 'app-drum-builder',
-  templateUrl: './drum-builder.component.html',
-  styleUrls: ['./drum-builder.component.css']
+  selector: 'app-edit-drumset',
+  templateUrl: './edit-drumset.component.html',
+  styleUrls: ['./edit-drumset.component.css']
 })
-export class DrumBuilderComponent implements OnInit {
+export class EditDrumsetComponent implements OnInit {
   constructor(private drumSetupService: DrumSetupService) { }
 
   drums = this.drumSetupService.getDrums()

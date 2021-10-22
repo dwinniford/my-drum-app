@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router'
 
 import { DrumsetComponent } from './drumset/drumset.component';
-import { DrumBuilderComponent } from './drum-builder/drum-builder.component';
+import { EditDrumsetComponent } from './edit-drumset/edit-drumset.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const appRoutes: Routes = [
-  {path: 'edit', component: DrumBuilderComponent},
+  {path: 'edit', component: EditDrumsetComponent},
   {path: 'drum-pad', component: DrumsetComponent},
   {path: '', redirectTo: '/drum-pad', pathMatch: 'full' },
   {path: '**', component: PageNotFoundComponent}

@@ -5,7 +5,7 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { DrumsetComponent } from './drumset/drumset.component';
 import { DrumBlockComponent } from './drum-block/drum-block.component';
-import { DrumBuilderComponent } from './drum-builder/drum-builder.component';
+import { EditDrumsetComponent } from './edit-drumset/edit-drumset.component';
 import { DrumFormComponent } from './drum-form/drum-form.component';
 import { ReactiveDrumFormComponent } from './reactive-drum-form/reactive-drum-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     DrumsetComponent,
     DrumBlockComponent,
-    DrumBuilderComponent,
+    EditDrumsetComponent,
     DrumFormComponent,
     ReactiveDrumFormComponent,
     PageNotFoundComponent
