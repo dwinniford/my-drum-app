@@ -1,6 +1,6 @@
 <div class="drum-grid">
     <app-drum-block *ngFor="let drum of drums"  [drum]="drum" class="drum-block"></app-drum-block>
-    <app-reactive-drum-form *ngIf="isActive" class="drum-form" [(isActive)]="isActive"></app-reactive-drum-form>
+    <app-reactive-drum-form *ngIf="isActive" class="drum-form" [(isActive)]="isActive" [setId]="setId"></app-reactive-drum-form>
     <div>
         <button (click)="activateForm()">Add</button>
         <a [routerLink]="['/drumsets', setId, 'edit']" ngClass="btn">Edit Drumset</a>

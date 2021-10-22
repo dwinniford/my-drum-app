@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DrumSetupService } from '../drum-setup.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit-drumset',
@@ -7,10 +8,20 @@ import { DrumSetupService } from '../drum-setup.service';
   styleUrls: ['./edit-drumset.component.css']
 })
 export class EditDrumsetComponent implements OnInit {
-  constructor(private drumSetupService: DrumSetupService) { }
+  drums: any = []
+  setId: string
+  constructor(
+    private drumSetupService: DrumSetupService,
+    private route: ActivatedRoute
+  ) {}
+  
 
-  drums = this.drumSetupService.getDrumset(0)
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      console.log(params)
+      this.setId = params.get('id')
+      this.drums = this.drumSetupService.getDrumset(this.setId)
+    })
   }
 
 }
