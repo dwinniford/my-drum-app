@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { drums } from '../drums'
 import { DrumSetupService } from '../drum-setup.service';
 
 @Component({
