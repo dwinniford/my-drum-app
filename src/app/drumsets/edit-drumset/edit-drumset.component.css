@@ -2,3 +2,13 @@ h1 {
     color: white;
     text-align: center;
 }
+.drum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 10vw 0px 10vw;
+    grid-gap: 10px;
+}
+
+.drum-form {
+    grid-column: span 2;
+}

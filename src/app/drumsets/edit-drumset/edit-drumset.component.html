@@ -1,3 +1,4 @@
 <h1>Edit Your drumset!</h1>
-
-<app-reactive-drum-form *ngFor="let drum of drums; index as i" class="drum-form" [edit]="true" [drum]="drum" [setId]="setId" [index]="i"></app-reactive-drum-form>
+<div class="drum-grid">
+    <app-reactive-drum-form *ngFor="let drum of drums; index as i" class="drum-form" [edit]="true" [drum]="drum" [setId]="setId" [index]="i"></app-reactive-drum-form>
+</div>
