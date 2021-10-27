@@ -10,12 +10,14 @@ export class NavComponent implements OnInit {
 
   constructor(private drumSetupService: DrumSetupService) { }
 
-  drumsets = this.drumSetupService.getAllDrumsets()
+  drumsets: any
+  ngOnInit() {
+    this.drumSetupService.getAllDrumsets.subscribe(drumsets => this.drumsets = drumsets)
+  }
+  
 
   addDrumset() {
     this.drumSetupService.addDrumset()
-  }
-  ngOnInit(): void {
   }
 
 }

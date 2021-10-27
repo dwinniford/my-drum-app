@@ -1,7 +1,7 @@
 import { trigger, animateChild, group, transition, animate, style, query } from '@angular/animations'
 
 export const fadeInAnimation = trigger('routeAnimation', [
-    transition('drumset <=> edit-drumset', [
+    transition('drumset <=> edit-drumset, drumset <=> drumset', [
         style({ position: 'relative' }),
         query(':enter, :leave', [
             style({

@@ -1,30 +1,35 @@
 import { Injectable } from '@angular/core';
 import { drums } from './drums'; 
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DrumSetupService {
-  private currentDrumsets = [[...drums]]
+  private currentDrumsets = new BehaviorSubject([[...drums]])
   constructor() { }
   
-  getAllDrumsets() {
-    return this.currentDrumsets
-  }
+  getAllDrumsets = this.currentDrumsets.asObservable()
 
   getDrumset(setIndex) {
     console.log(this.currentDrumsets[setIndex])
     return this.currentDrumsets[setIndex]
   }
   addDrumToSet(setIndex, drum) {
-    this.currentDrumsets[setIndex].push(drum)
-    console.log("currentDrumsets array after addDrumToSet", this.currentDrumsets, " original drums array =", drums)
+    let nextValue = [...this.currentDrumsets.getValue()]
+    nextValue[setIndex].push(drum)
+    this.currentDrumsets.next(nextValue)
+    console.log("currentDrumsets array after addDrumToSet", this.currentDrumsets.getValue(), " original drums array =", drums)
   }
   editDrumInSet(setIndex, drumIndex, drum) {
-    this.currentDrumsets[setIndex].splice(drumIndex, 1, drum)
+    let nextValue = [...this.currentDrumsets.getValue()]
+    nextValue[setIndex].splice(drumIndex, 1, drum)
+    this.currentDrumsets.next(nextValue)
   }
   addDrumset() {
-    this.currentDrumsets.push([...drums])
+    let nextValue = [...this.currentDrumsets.getValue()]
+    nextValue.push([...drums])
+    this.currentDrumsets.next(nextValue)
   }
 
 }

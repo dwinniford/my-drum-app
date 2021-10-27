@@ -20,7 +20,7 @@ export class EditDrumsetComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       console.log(params)
       this.setId = params.get('id')
-      this.drums = this.drumSetupService.getDrumset(this.setId)
+      this.drumSetupService.getAllDrumsets.subscribe(drumsets => this.drums = drumsets[this.setId])
     })
   }
 
