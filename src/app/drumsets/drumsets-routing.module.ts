@@ -4,8 +4,8 @@ import { DrumsetComponent } from './drumset/drumset.component';
 import { EditDrumsetComponent } from './edit-drumset/edit-drumset.component';
 
 const drumsetRoutes: Routes = [
-  {path: "drumsets/:id", component: DrumsetComponent},
-  {path: "drumsets/:id/edit", component: EditDrumsetComponent}
+  {path: "drumsets/:id", component: DrumsetComponent, data: { animation: 'drumset' } },
+  {path: "drumsets/:id/edit", component: EditDrumsetComponent, data: {animation: 'edit-drumset'}}
 ];
 
 @NgModule({
